@@ -78,7 +78,7 @@ def convert_to_pil_image(image, drange=[0,1]):
 
     image = adjust_dynamic_range(image, drange, [0,255])
     image = np.rint(image).clip(0, 255).astype(np.uint8)
-    fmt = 'RGB' if image.ndim == 3 else 'L'
+    fmt =  {1:'L',3:'RGB',4:'RGBA'}[image.shape[0]]
     return PIL.Image.fromarray(image, fmt)
 
 def save_image_grid(images, filename, drange=[0,1], grid_size=None):
