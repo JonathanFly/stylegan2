@@ -1,6 +1,6 @@
 ## README
 
-Minor modifications to the skyflynil's StyleGAN2 repo to accept four channel (RGBA) png files.
+Minor modifications to skyflynil's StyleGAN2 repo to accept four channel (RGBA) png files.
 
 **Training example for 512x512 RGBA png files**
 
