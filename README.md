@@ -2,6 +2,8 @@
 
 Minor modifications to skyflynil's StyleGAN2 repo to accept four channel (RGBA) png files.
 
+Colab training example: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eswahn/stylegan2/blob/master/Stylegan2_RGBA.ipynb)
+
 **Training example for 512x512 RGBA png files**
 
 ```
