@@ -1,3 +1,27 @@
+## README
+
+Minor modifications to the skyflynil's StyleGAN2 repo to accept four channel (RGBA) png files.
+
+**Training example for 512x512 RGBA png files**
+
+```
+git clone https://github.com/eswahn/stylegan2.git
+cd stylegan2
+python dataset_tool.py create_from_images ./dataset/dataset_name dataset_name
+python run_training.py --use-raw=false --config=config-e --metric=none --num-gpus=1 --total-kimg=10000 \
+                       --min-h=4 --min-w=4 --res-log2=7 --mirror-augment=false --mirror-augment-v=false \
+                       --result-dir=result_dir --data-dir=./dataset --dataset=dataset_name 
+```
+
+(see instructions below regarding resolution etc)
+
+**Testing**
+
+```
+python run_generator.py generate-images --network=pkl_path --seeds=0-100 --truncation-psi=1.0
+```
+
+
 ## skyflynil README
 
 ## Train Your Own StyleGAN2 Using Colab
